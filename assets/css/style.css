@@ -95,13 +95,13 @@ svg {
 	color: #f7f5b2;
 	font-weight: bold;
 }
-.illustration {
+/* .illustration {
 	position: absolute;
 	float: right;
 	width: 650px;
 	bottom: 0;
 	right: 0;
-}
+} */
 #hero button {
 	font-family: poppins;
 	padding: 5px 20px 5px 20px;
