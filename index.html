@@ -18,6 +18,12 @@
 			href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,300;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
 		<!-- Javascript -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -31,33 +37,54 @@
 			crossorigin="anonymous"
 			defer
 		></script>
-
 		<title>Do-re-mind</title>
 	</head>
-	<body>
-		<nav>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3">Test</div>
-					<div class="col-md-9 d-flex">
-						<ul>
-							<li>About Us</li>
-							<li>Features</li>
-							<li>Testimonies</li>
-							<li>Contact Us</li>
-						</ul>
-					</div>
+	<header>
+		<nav class="navbar navbar-expand-lg fixed-top">
+			<div class="container-fluid">
+				<a class="navbar-brand ps-5" href="#">Do-re-mind</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto mb-2 mt-2 mb-lg-0 navitem">
+						<li class="nav-item">
+							<a class="nav-link px-5" href="#">About Us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link px-5" href="#">Features</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link px-5" href="#">Testimonies</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link px-5" href="#">Contact Us</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</nav>
+	</header>
+	<body>
+		<!-- Hero Section -->
 		<section id="hero">
 			<div class="container h-100">
 				<div class="row h-100">
-					<div class="col-md-6">
+					<div class="col-md-6 my-auto">
 						<h3>It’s as easy as singin’</h3>
 						<h1>Do-re-mind</h1>
 						<h3>Never let your productivity be interfered ever again</h3>
-						<button>LET’S DIVE IN</button>
+						<button type="button" class="btn-lg shadow-lg">
+							LET’S DIVE IN
+						</button>
 					</div>
 				</div>
 				<div>

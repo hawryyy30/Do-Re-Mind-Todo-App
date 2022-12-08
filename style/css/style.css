@@ -54,18 +54,63 @@ svg {
 
 /* /CSS RESET */
 
+/* Navigation Bar */
+.navitem {
+	background-color: white;
+	position: absolute;
+	float: right;
+	right: 0;
+	padding: 5px;
+	border-radius: 20px 0px 0px 20px;
+}
+.navbar-brand {
+	font-family: caveat;
+	font-size: 3rem;
+	color: #352771;
+	font-weight: bold;
+}
+
+.nav-link {
+	font-family: poppins;
+	font-size: 1.3rem;
+	color: #352771;
+}
+/* End of Navigation bar */
+
 /* Hero */
 #hero {
 	position: relative;
+	height: 100vh;
+	background-color: #5e89ef;
+}
+#hero h1 {
+	font-family: caveat;
+	color: #352771;
+	font-size: 8rem;
+	font-weight: bold;
+}
+#hero h3 {
+	font-family: poppins;
+	font-size: 1.8rem;
+	color: #f7f5b2;
+	font-weight: bold;
 }
 .illustration {
 	position: absolute;
 	float: right;
-	width: 350px;
+	width: 650px;
 	bottom: 0;
 	right: 0;
 }
-
-nav .container .row .col-md-9 > li {
-	text-decoration: none;
+#hero button {
+	font-family: poppins;
+	padding: 5px 20px 5px 20px;
+	border-radius: 5px;
+	font-size: 2rem;
+	font-weight: bold;
+	color: #352771;
+	background-color: #f7f5b2;
+	border: none;
+	margin-top: 10px;
 }
+/* End of Hero */
