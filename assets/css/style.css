@@ -3,97 +3,101 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	font: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: inherit;
 }
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
-	list-style: none;
+  list-style: none;
 }
 /* Set core root defaults */
 html:focus-within {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 html,
 body {
-	height: 100%;
+  height: 100%;
 }
 /* Set core body defaults */
 body {
-	text-rendering: optimizeSpeed;
-	line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-	text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 /* Make images easier to work with */
 img,
 picture,
 svg {
-	max-width: 100%;
-	display: block;
+  max-width: 100%;
+  display: block;
 }
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-	html:focus-within {
-		scroll-behavior: auto;
-	}
-	*,
-	*::before,
-	*::after {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important;
-	}
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* /CSS RESET */
 
 /* Navigation Bar */
+.navbar {
+  z-index: 1;
+}
+
 .navitem {
-	background-color: white;
-	position: absolute;
-	float: right;
-	right: 0;
-	padding: 5px;
-	border-radius: 20px 0px 0px 20px;
+  background-color: white;
+  position: absolute;
+  float: right;
+  right: 0;
+  padding: 5px;
+  border-radius: 20px 0px 0px 20px;
 }
 .navbar-brand {
-	font-family: caveat;
-	font-size: 3rem;
-	color: #352771;
-	font-weight: bold;
+  font-family: caveat;
+  font-size: 3rem;
+  color: #352771;
+  font-weight: bold;
 }
 
 .nav-link {
-	font-family: poppins;
-	font-size: 1.3rem;
-	color: #352771;
+  font-family: poppins;
+  font-size: 1.3rem;
+  color: #352771;
 }
 /* End of Navigation bar */
 
 /* Hero */
 #hero {
-	position: relative;
-	height: 100vh;
-	background-color: #5e89ef;
+  position: relative;
+  height: 100vh;
+  background-color: #5e89ef;
 }
 #hero h1 {
-	font-family: caveat;
-	color: #352771;
-	font-size: 8rem;
-	font-weight: bold;
+  font-family: caveat;
+  color: #352771;
+  font-size: 8rem;
+  font-weight: bold;
 }
 #hero h3 {
-	font-family: poppins;
-	font-size: 1.8rem;
-	color: #f7f5b2;
-	font-weight: bold;
+  font-family: poppins;
+  font-size: 1.8rem;
+  color: #f7f5b2;
+  font-weight: bold;
 }
 /* .illustration {
 	position: absolute;
@@ -103,49 +107,43 @@ svg {
 	right: 0;
 } */
 #hero button {
-	font-family: poppins;
-	padding: 5px 20px 5px 20px;
-	border-radius: 5px;
-	font-size: 2rem;
-	font-weight: bold;
-	color: #352771;
-	background-color: #f7f5b2;
-	border: none;
-	margin-top: 10px;
+  font-family: poppins;
+  padding: 5px 20px 5px 20px;
+  border-radius: 5px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #352771;
+  background-color: #f7f5b2;
+  border: none;
+  margin-top: 10px;
 }
 /* End of Hero */
 
 /* login form */
 .popup {
-  position: absolute;
+  position: fixed;
   border: 10px solid hsl(222, 82%, 65%);
   border-radius: 1.875rem;
-  top: -150%;
+  top: 50%;
   left: 50%;
-  opacity: 0;
-  transform: translate(-50%, -50%);
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(0);
   width: 30rem;
   height: 40rem;
   background-color: hsl(0, 0%, 100%);
   padding: 8.375rem 3.75rem;
   text-align: center;
-  transition: 
-    top 0ms ease-in-out 200ms,
-    opacity 200ms ease-in-out 0ms,
-    transform 20ms ease-in-out 0ms;
+  transition: 200ms ease-in-out;
+  z-index: 10;
 }
 
-.popup .active {
-  top: 50%;
-  opacity: 1;
-  transform: translate(-50%, -50%);
-  transition: 
-    top 0ms ease-in-out 200ms,
-    opacity 200ms ease-in-out 0ms,
-    transform 20ms ease-in-out 0ms;
+.popup.active {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .popup .close-btn {
+  background: none;
+  border: none; 
   color: hsl(222, 82%, 65%);
   position: absolute;
   top: 10px;
@@ -155,6 +153,27 @@ svg {
   font-size: 4rem;
   text-align: center;
   cursor: pointer;
+  transition: color 150ms ease-in-out;
+}
+
+.popup .close-btn:hover {
+  color: hsl(222, 82%, 55%);
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  transition: 200ms ease-in-out;
+  pointer-events: none;
+  z-index: 9;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .popup h1 {
@@ -209,17 +228,20 @@ input:focus {
   overflow: hidden;
 }
 
-.popup button {
+.popup .login {
   width: 100%;
   border-radius: 10px;
-  padding: .7rem 0;
+  padding: 0.7rem 0;
   border: none;
   outline: none;
   font-size: 1.7rem;
   background-color: hsl(222, 82%, 65%);
+  transition: background-color 150ms ease-in-out;
 }
 
-
+.popup .login:hover {
+  background-color: hsl(222, 90%, 70%);
+}
 
 /* testimonies section */
 .carousel-wrapper {
@@ -282,7 +304,7 @@ ul {
 }
 
 .footer-logo {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer-logo .footer-title {
@@ -318,6 +340,11 @@ ul {
   text-align: center;
   line-height: 2.375rem;
   border-radius: 50%;
+  transition: opacity 150ms ease-in-out;
+}
+
+.footer-social-icon i:hover {
+  opacity: .9;
 }
 
 .facebook-bg {
@@ -328,8 +355,20 @@ ul {
   background: hsl(206, 82%, 63%);
 }
 
-.google-bg {
-  background: hsl(7, 71%, 55%);
+.instagram-bg {
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.tiktok-bg {
+  background: hsl(0, 0%, 0%);
+}
+
+.linkedin-bg {
+  background: hsl(199, 85%, 36%);
 }
 
 .footer-widget-heading h3 {
@@ -383,6 +422,7 @@ ul {
   background: hsl(215, 84%, 85%);
   border: 1px solid hsl(215, 84%, 85%);
   color: hsl(0, 0%, 100%);
+  outline: none;
 }
 
 .subscribe-form input,
@@ -410,14 +450,14 @@ input:focus {
   right: 0;
   background: hsl(222, 82%, 65%);
   padding: 0.8125rem 1.25rem;
-  border: 1px solid hsl(222, 82%, 65%);
+  border: 2px solid hsl(222, 82%, 65%);
   top: 0;
   transition: all 150ms ease-in-out;
 }
 
 .subscribe-form button:hover {
   background: hsl(222, 96%, 68%);
-  border: 1px solid hsl(222, 96%, 68%);
+  border: 2px solid hsl(222, 96%, 68%);
 }
 
 .subscribe-form button i {

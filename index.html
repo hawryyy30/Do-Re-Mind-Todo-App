@@ -25,6 +25,7 @@
 			rel="stylesheet"
 		/>
 		<!-- Javascript -->
+    <script src="js/app.js" defer></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
 			integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -86,7 +87,7 @@
 						<h3>It’s as easy as singin’</h3>
 						<h1>Do-re-mind</h1>
 						<h3>Never let your productivity be interfered ever again</h3>
-						<button type="button" class="btn-lg shadow-lg show-login">
+						<button data-modal-target="#modal" class="btn-lg shadow-lg">
 							LET’S DIVE IN
 						</button>
 					</div>
@@ -102,8 +103,8 @@
 		</section>
 
     <!-- login form section -->
-    <div class="popup">
-      <div class="close-btn">&times;</div>
+    <div class="popup" id="modal">
+      <button data-close-button class="close-btn">&times;</button>
       <h1 class="fw-bold">Do-re-mind</h1>
       <h3>Login to your account</h3>
       <form action="">
@@ -113,9 +114,10 @@
         <div class="form-element">
           <input type="password" id="password" placeholder="password" required>
         </div>
-        <button>Login</button> 
+        <button class="login">Login</button> 
       </form>
     </div>
+    <div id="overlay"></div>
     <!-- login form section -->
 
     <!-- testimonies section -->
@@ -182,121 +184,123 @@
     <!-- testimonies section -->
 
     <!-- contact section -->
-    <footer class="footer-section">
-      <div class="container">
-        <div class="footer-cta pt-5 pb-5">
-          <div class="row">
-            <div class="col-xl-4 col-md-4 mb-30">
-              <div class="single-cta">
-                <i class="fas fa-map-marker-alt"></i>
-                <div class="cta-text">
-                  <h4>Find us</h4>
-                  <span>Jamin Ginting Street, Medan</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-md-4 mb-30">
-              <div class="single-cta">
-                <i class="fas fa-phone"></i>
-                <div class="cta-text">
-                  <h4>Call us</h4>
-                  <span>+62 813 8439 9901</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-md-4 mb-30">
-              <div class="single-cta">
-                <i class="far fa-envelope-open"></i>
-                <div class="cta-text">
-                  <h4>Mail us</h4>
-                  <span>Doremind@gmail.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-content pt-5 pb-5">
-          <div class="row">
-            <div class="col-xl-4 col-lg-4 mb-50">
-              <div class="footer-widget">
-                <div class="footer-logo">
-                  <a href="index.html" class="footer-title"><h2>Do-re-mind</h2></a>
-                </div>
-                <div class="footer-text">
-                  <p>
-                    Welcome to Do-re-mind! We know how busy and overwhelming life can get, and that's why we created this tool to help you stay organized and on top of your tasks. With our app, you can easily add new items to your to-do
-                    list, prioritize them, set reminders, and track your progress. Give it a try and see how much easier it can make your life!
-                  </p>
-                </div>
-                <div class="footer-social-icon">
-                  <span>Follow us</span>
-                  <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                  <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                  <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-              <div class="footer-widget">
-                <div class="footer-widget-heading">
-                  <h3>Useful Links</h3>
-                </div>
-                <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">about</a></li>
-                  <li><a href="#">services</a></li>
-                  <li><a href="#">portfolio</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">About us</a></li>
-                  <li><a href="#">Our Services</a></li>
-                  <li><a href="#">Expert Team</a></li>
-                  <li><a href="#">Contact us</a></li>
-                  <li><a href="#">Latest News</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-              <div class="footer-widget">
-                <div class="footer-widget-heading">
-                  <h3>Subscribe</h3>
-                </div>
-                <div class="footer-text mb-25">
-                  <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
-                </div>
-                <div class="subscribe-form">
-                  <form action="#">
-                    <input type="text" placeholder="Email Address" />
-                    <button><i class="fab fa-telegram-plane"></i></button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="copyright-area">
+      <footer class="footer-section">
         <div class="container">
-          <div class="row">
-            <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-              <div class="copyright-text">
-                <p>Copyright &copy; 2022, All Right Reserved <a href="">Do-re-mind</a></p>
+          <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+              <div class="col-xl-4 col-md-4 mb-30">
+                <div class="single-cta">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div class="cta-text">
+                    <h4>Find us</h4>
+                    <span>Jamin Ginting Street, Medan</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                <div class="single-cta">
+                  <i class="fas fa-phone"></i>
+                  <div class="cta-text">
+                    <h4>Call us</h4>
+                    <span>+62 813 8439 9901</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                <div class="single-cta">
+                  <i class="far fa-envelope-open"></i>
+                  <div class="cta-text">
+                    <h4>Mail us</h4>
+                    <span>Doremind@gmail.com</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-              <div class="footer-menu">
-                <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Terms</a></li>
-                  <li><a href="#">Privacy</a></li>
-                  <li><a href="#">Policy</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
+          </div>
+          <div class="footer-content pt-5 pb-5">
+            <div class="row">
+              <div class="col-xl-4 col-lg-4 mb-50">
+                <div class="footer-widget">
+                  <div class="footer-logo">
+                    <a href="index.html" class="footer-title"><h2>Do-re-mind</h2></a>
+                  </div>
+                  <div class="footer-text">
+                    <p>
+                      Welcome to Do-re-mind! We know how busy and overwhelming life can get, and that's why we created this tool to help you stay organized and on top of your tasks. With our app, you can easily add new items to your to-do
+                      list, prioritize them, set reminders, and track your progress. Give it a try and see how much easier it can make your life!
+                    </p>
+                  </div>
+                  <div class="footer-social-icon">
+                    <span>Follow us</span>
+                    <a href="#"><i class="fa-brands fa-facebook-f facebook-bg"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter twitter-bg"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram instagram-bg"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok tiktok-bg"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in linkedin-bg"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                <div class="footer-widget">
+                  <div class="footer-widget-heading">
+                    <h3>Useful Links</h3>
+                  </div>
+                  <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Expert Team</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Latest News</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                <div class="footer-widget">
+                  <div class="footer-widget-heading">
+                    <h3>Subscribe</h3>
+                  </div>
+                  <div class="footer-text mb-25">
+                    <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                  </div>
+                  <div class="subscribe-form">
+                    <form action="#">
+                      <input type="text" placeholder="Email Address" />
+                      <button><i class="fab fa-telegram-plane"></i></button>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+        <div class="copyright-area">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                <div class="copyright-text">
+                  <p>Copyright &copy; 2022, All Right Reserved <a href="">Do-re-mind</a></p>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                <div class="footer-menu">
+                  <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     <!-- contact section -->
 	</body>
 </html>
