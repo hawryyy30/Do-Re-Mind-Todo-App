@@ -95,6 +95,7 @@ svg {
 	color: #f7f5b2;
 	font-weight: bold;
 }
+
 /* .illustration {
 	position: absolute;
 	float: right;
@@ -117,346 +118,340 @@ svg {
 
 /* login form */
 .popup {
-  position: absolute;
-  border: 10px solid hsl(222, 82%, 65%);
-  border-radius: 1.875rem;
-  top: -150%;
-  left: 50%;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  width: 30rem;
-  height: 40rem;
-  background-color: hsl(0, 0%, 100%);
-  padding: 8.375rem 3.75rem;
-  text-align: center;
-  transition: 
-    top 0ms ease-in-out 200ms,
-    opacity 200ms ease-in-out 0ms,
-    transform 20ms ease-in-out 0ms;
+	position: absolute;
+	border: 10px solid hsl(222, 82%, 65%);
+	border-radius: 1.875rem;
+	top: -150%;
+	left: 50%;
+	opacity: 0;
+	transform: translate(-50%, -50%);
+	width: 30rem;
+	height: 40rem;
+	background-color: hsl(0, 0%, 100%);
+	padding: 8.375rem 3.75rem;
+	text-align: center;
+	transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms,
+		transform 20ms ease-in-out 0ms;
 }
 
 .popup .active {
-  top: 50%;
-  opacity: 1;
-  transform: translate(-50%, -50%);
-  transition: 
-    top 0ms ease-in-out 200ms,
-    opacity 200ms ease-in-out 0ms,
-    transform 20ms ease-in-out 0ms;
+	top: 50%;
+	opacity: 1;
+	transform: translate(-50%, -50%);
+	transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms,
+		transform 20ms ease-in-out 0ms;
 }
 
 .popup .close-btn {
-  color: hsl(222, 82%, 65%);
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 4.5rem;
-  height: 1rem;
-  font-size: 4rem;
-  text-align: center;
-  cursor: pointer;
+	color: hsl(222, 82%, 65%);
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 4.5rem;
+	height: 1rem;
+	font-size: 4rem;
+	text-align: center;
+	cursor: pointer;
 }
 
 .popup h1 {
-  color: hsl(251, 49%, 30%);
-  font-family: "Caveat", cursive;
-  font-size: 3.5rem;
-  margin-bottom: 1.3rem;
+	color: hsl(251, 49%, 30%);
+	font-family: "Caveat", cursive;
+	font-size: 3.5rem;
+	margin-bottom: 1.3rem;
 }
 
 .popup h3 {
-  color: hsl(222, 82%, 65%);
-  font-weight: 400;
-  margin-bottom: 3rem;
+	color: hsl(222, 82%, 65%);
+	font-weight: 400;
+	margin-bottom: 3rem;
 }
 
 .popup .form-element {
-  margin: 1rem 0;
+	margin: 1rem 0;
 }
 
 .popup .form-element input {
-  border: 1px solid hsl(222, 82%, 65%);
-  border-radius: 5px;
-  outline: none;
+	border: 1px solid hsl(222, 82%, 65%);
+	border-radius: 5px;
+	outline: none;
 }
 
 .popup .form-element input[type="text"],
 .popup .form-element input[type="password"] {
-  margin: 2rem 0;
-  display: block;
-  width: 100%;
-  padding: 10px;
-  font-size: 1.5rem;
+	margin: 2rem 0;
+	display: block;
+	width: 100%;
+	padding: 10px;
+	font-size: 1.5rem;
 }
 
 .popup .form-element ::placeholder {
-  color: hsl(222, 82%, 65%);
-  opacity: 1;
+	color: hsl(222, 82%, 65%);
+	opacity: 1;
 }
 
 .popup .form-element input,
 select,
 textarea {
-  color: hsl(222, 82%, 65%);
-  overflow: hidden;
+	color: hsl(222, 82%, 65%);
+	overflow: hidden;
 }
 
 .popup .form-element input,
 select,
 textarea:focus,
 input:focus {
-  color: hsl(222, 82%, 65%);
-  overflow: hidden;
+	color: hsl(222, 82%, 65%);
+	overflow: hidden;
 }
 
 .popup button {
-  width: 100%;
-  border-radius: 10px;
-  padding: .7rem 0;
-  border: none;
-  outline: none;
-  font-size: 1.7rem;
-  background-color: hsl(222, 82%, 65%);
+	width: 100%;
+	border-radius: 10px;
+	padding: 0.7rem 0;
+	border: none;
+	outline: none;
+	font-size: 1.7rem;
+	background-color: hsl(222, 82%, 65%);
 }
-
-
 
 /* testimonies section */
 .carousel-wrapper {
-  padding: 0 15rem 2rem;
-  background-color: hsl(215, 84%, 85%);
+	padding: 0 15rem 2rem;
+	background-color: hsl(215, 84%, 85%);
 }
 
 .carousel-wrapper .carousel-title {
-  color: hsl(222, 82%, 65%);
-  font-family: "Caveat", cursive;
-  font-size: 3.5rem;
+	color: hsl(222, 82%, 65%);
+	font-family: "Caveat", cursive;
+	font-size: 3.5rem;
 }
 
 .carousel-wrapper .carousel-item > img {
-  border-radius: 1rem;
+	border-radius: 1rem;
 }
 
 /* footer section */
 ul {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .footer-section {
-  background: hsl(251, 49%, 30%);
-  position: relative;
+	background: hsl(251, 49%, 30%);
+	position: relative;
 }
 
 .footer-cta {
-  border-bottom: 1px solid hsl(58, 81%, 83%);
+	border-bottom: 1px solid hsl(58, 81%, 83%);
 }
 
 .single-cta i {
-  color: hsl(58, 81%, 83%);
-  font-size: 1.875rem;
-  float: left;
-  margin-top: 0.5rem;
+	color: hsl(58, 81%, 83%);
+	font-size: 1.875rem;
+	float: left;
+	margin-top: 0.5rem;
 }
 
 .cta-text {
-  padding-left: 1rem;
-  display: inline-block;
+	padding-left: 1rem;
+	display: inline-block;
 }
 
 .cta-text h4 {
-  color: hsl(0, 0%, 100%);
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 2px;
+	color: hsl(0, 0%, 100%);
+	font-size: 1.25rem;
+	font-weight: 600;
+	margin-bottom: 2px;
 }
 
 .cta-text span {
-  color: hsl(0, 0%, 46%);
-  font-size: 1rem;
+	color: hsl(0, 0%, 46%);
+	font-size: 1rem;
 }
 
 .footer-content {
-  position: relative;
-  z-index: 2;
+	position: relative;
+	z-index: 2;
 }
 
 .footer-logo {
-  margin-bottom: .5rem;
+	margin-bottom: 0.5rem;
 }
 
 .footer-logo .footer-title {
-  color: hsl(215, 84%, 85%);
-  font-family: "Caveat", cursive;
-  text-decoration: none;
+	color: hsl(215, 84%, 85%);
+	font-family: "Caveat", cursive;
+	text-decoration: none;
 }
 
 .footer-text p {
-  margin-bottom: 0.875rem;
-  font-size: 0.875rem;
-  color: hsl(0, 0%, 49%);
-  line-height: 1.75rem;
+	margin-bottom: 0.875rem;
+	font-size: 0.875rem;
+	color: hsl(0, 0%, 49%);
+	line-height: 1.75rem;
 }
 
 .footer-social-icon span {
-  color: hsl(0, 0%, 100%);
-  display: block;
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 1.25rem;
+	color: hsl(0, 0%, 100%);
+	display: block;
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-bottom: 1.25rem;
 }
 
 .footer-social-icon a {
-  color: hsl(0, 0%, 100%);
-  font-size: 1rem;
-  margin-right: 0.9375rem;
+	color: hsl(0, 0%, 100%);
+	font-size: 1rem;
+	margin-right: 0.9375rem;
 }
 
 .footer-social-icon i {
-  height: 2.5rem;
-  width: 2.5rem;
-  text-align: center;
-  line-height: 2.375rem;
-  border-radius: 50%;
+	height: 2.5rem;
+	width: 2.5rem;
+	text-align: center;
+	line-height: 2.375rem;
+	border-radius: 50%;
 }
 
 .facebook-bg {
-  background: hsl(221, 44%, 41%);
+	background: hsl(221, 44%, 41%);
 }
 
 .twitter-bg {
-  background: hsl(206, 82%, 63%);
+	background: hsl(206, 82%, 63%);
 }
 
 .google-bg {
-  background: hsl(7, 71%, 55%);
+	background: hsl(7, 71%, 55%);
 }
 
 .footer-widget-heading h3 {
-  color: hsl(0, 0%, 100%);
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  position: relative;
+	color: hsl(0, 0%, 100%);
+	font-size: 1.25rem;
+	font-weight: 600;
+	margin-bottom: 1.5rem;
+	position: relative;
 }
 
 .footer-widget-heading h3::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.9375rem;
-  height: 2px;
-  width: 5rem;
-  background: hsl(58, 81%, 83%);
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -0.9375rem;
+	height: 2px;
+	width: 5rem;
+	background: hsl(58, 81%, 83%);
 }
 
 .footer-widget ul li {
-  display: inline-block;
-  float: left;
-  width: 50%;
-  margin-bottom: 0.75rem;
+	display: inline-block;
+	float: left;
+	width: 50%;
+	margin-bottom: 0.75rem;
 }
 
 .footer-widget ul li a {
-  transition: color 150ms ease-in-out;
-  text-decoration: none;
+	transition: color 150ms ease-in-out;
+	text-decoration: none;
 }
 
 .footer-widget ul li a:hover {
-  color: hsl(58, 81%, 83%);
+	color: hsl(58, 81%, 83%);
 }
 
 .footer-widget ul li a {
-  color: hsl(0, 0%, 53%);
-  text-transform: capitalize;
+	color: hsl(0, 0%, 53%);
+	text-transform: capitalize;
 }
 
 .subscribe-form {
-  position: relative;
-  overflow: hidden;
-  border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 5px;
 }
 
 .subscribe-form input {
-  width: 100%;
-  padding: 0.875rem 1.75rem;
-  background: hsl(215, 84%, 85%);
-  border: 1px solid hsl(215, 84%, 85%);
-  color: hsl(0, 0%, 100%);
+	width: 100%;
+	padding: 0.875rem 1.75rem;
+	background: hsl(215, 84%, 85%);
+	border: 1px solid hsl(215, 84%, 85%);
+	color: hsl(0, 0%, 100%);
 }
 
 .subscribe-form input,
 select,
 textarea {
-  color: hsl(0, 0%, 13%);
-  overflow: hidden;
+	color: hsl(0, 0%, 13%);
+	overflow: hidden;
 }
 
 .subscribe-form input,
 select,
 textarea:focus,
 input:focus {
-  color: hsl(0, 0%, 13%);
-  overflow: hidden;
+	color: hsl(0, 0%, 13%);
+	overflow: hidden;
 }
 
 .subscribe-form ::placeholder {
-  color: hsl(0, 0%, 13%);
-  opacity: 1;
+	color: hsl(0, 0%, 13%);
+	opacity: 1;
 }
 
 .subscribe-form button {
-  position: absolute;
-  right: 0;
-  background: hsl(222, 82%, 65%);
-  padding: 0.8125rem 1.25rem;
-  border: 1px solid hsl(222, 82%, 65%);
-  top: 0;
-  transition: all 150ms ease-in-out;
+	position: absolute;
+	right: 0;
+	background: hsl(222, 82%, 65%);
+	padding: 0.8125rem 1.25rem;
+	border: 1px solid hsl(222, 82%, 65%);
+	top: 0;
+	transition: all 150ms ease-in-out;
 }
 
 .subscribe-form button:hover {
-  background: hsl(222, 96%, 68%);
-  border: 1px solid hsl(222, 96%, 68%);
+	background: hsl(222, 96%, 68%);
+	border: 1px solid hsl(222, 96%, 68%);
 }
 
 .subscribe-form button i {
-  color: hsl(0, 0%, 100%);
-  font-size: 1.375rem;
-  transform: rotate(-6deg);
+	color: hsl(0, 0%, 100%);
+	font-size: 1.375rem;
+	transform: rotate(-6deg);
 }
 
 .copyright-area {
-  background: hsl(222, 82%, 65%);
-  padding: 1.5625rem 0;
+	background: hsl(222, 82%, 65%);
+	padding: 1.5625rem 0;
 }
 
 .copyright-text p {
-  margin: 0;
-  font-size: 0.875rem;
-  color: hsl(0, 0%, 13%);
+	margin: 0;
+	font-size: 0.875rem;
+	color: hsl(0, 0%, 13%);
 }
 
 .copyright-text p a {
-  font-family: "Caveat", cursive;
-  font-size: 1.5rem;
-  color: hsl(58, 81%, 83%);
-  text-decoration: none;
+	font-family: "Caveat", cursive;
+	font-size: 1.5rem;
+	color: hsl(58, 81%, 83%);
+	text-decoration: none;
 }
 
 .footer-menu li {
-  display: inline-block;
-  margin-left: 1.25rem;
-  margin-top: 0.625rem;
+	display: inline-block;
+	margin-left: 1.25rem;
+	margin-top: 0.625rem;
 }
 
 .footer-menu li a {
-  font-size: 0.875rem;
-  color: hsl(0, 0%, 13%);
-  text-decoration: none;
-  transition: color 150ms ease-in-out;
+	font-size: 0.875rem;
+	color: hsl(0, 0%, 13%);
+	text-decoration: none;
+	transition: color 150ms ease-in-out;
 }
 
 .footer-menu li:hover a {
-  color: hsl(58, 81%, 83%);
+	color: hsl(58, 81%, 83%);
 }
