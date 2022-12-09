@@ -55,6 +55,10 @@ svg {
 /* /CSS RESET */
 
 /* Navigation Bar */
+.navbar {
+	background-color: #5e89ef;
+	border-bottom: 5px white;
+}
 .navitem {
 	background-color: white;
 	position: absolute;
