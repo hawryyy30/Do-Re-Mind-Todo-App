@@ -3,182 +3,180 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font: inherit;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font: inherit;
 }
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
-  list-style: none;
+	list-style: none;
 }
 /* Set core root defaults */
 html:focus-within {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 html,
 body {
-  height: 100%;
+	font-family: poppins;
+	height: 100%;
 }
 /* Set core body defaults */
 body {
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
 }
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+	text-decoration-skip-ink: auto;
 }
 /* Make images easier to work with */
 img,
 picture,
 svg {
-  max-width: 100%;
-  display: block;
+	max-width: 100%;
+	display: block;
 }
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }
 
 /* /CSS RESET */
 
+#doremind {
+	font-family: caveat;
+	color: #352771;
+	font-weight: bold;
+}
+
 /* Navigation Bar */
 .navbar {
-  z-index: 1;
-  background-color: #5e89ef;
+	z-index: 1;
+	background-color: #5e89ef;
 	border-bottom: 5px white;
 }
 
 .navitem {
-  background-color: white;
-  position: absolute;
-  float: right;
-  right: 0;
-  padding: 5px;
-  border-radius: 20px 0px 0px 20px;
+	background-color: white;
+	position: absolute;
+	float: right;
+	right: 0;
+	padding: 5px;
+	border-radius: 20px 0px 0px 20px;
 }
 .navbar-brand {
-  font-family: caveat;
-  font-size: 3rem;
-  color: #352771;
-  font-weight: bold;
+	font-family: caveat;
+	font-size: 4vw;
+	color: #352771;
+	font-weight: bold;
 }
 
 .nav-link {
-  font-family: poppins;
-  font-size: 1.3rem;
-  color: #352771;
+	font-size: 1.5vw;
+	color: #352771;
 }
 /* End of Navigation bar */
 
 /* Hero */
 #hero {
-  position: relative;
-  height: 100vh;
-  background-color: #5e89ef;
+	position: relative;
+	height: 100vh;
+	background-color: #5e89ef;
+}
+#hero img {
+	width: 40vw;
 }
 #hero h1 {
-  font-family: caveat;
-  color: #352771;
-  font-size: 8rem;
-  font-weight: bold;
+	font-family: caveat;
+	color: #352771;
+	font-size: 9vw;
+	font-weight: bold;
 }
 #hero h3 {
-  font-family: poppins;
-  font-size: 1.8rem;
-  color: #f7f5b2;
-  font-weight: bold;
+	font-size: 1.8vw;
+	color: #f7f5b2;
+	font-weight: bold;
 }
 
-/* .illustration {
-	position: absolute;
-	float: right;
-	width: 650px;
-	bottom: 0;
-	right: 0;
-} */
 #hero button {
-  font-family: poppins;
-  padding: 5px 20px 5px 20px;
-  border-radius: 5px;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #352771;
-  background-color: #f7f5b2;
-  border: none;
-  margin-top: 10px;
+	padding: 5px 20px 5px 20px;
+	border-radius: 5px;
+	font-size: 2vw;
+	font-weight: bold;
+	color: #352771;
+	background-color: #f7f5b2;
+	border: none;
+	margin-top: 10px;
 }
 /* End of Hero */
 
 /* login form */
 .popup {
-  position: fixed;
-  border: 10px solid hsl(222, 82%, 65%);
-  border-radius: 1.875rem;
-  top: 50%;
-  left: 50%;
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(0);
-  width: 30rem;
-  height: 35rem;
-  background-color: hsl(0, 0%, 100%);
-  padding: 4rem 3.75rem;
-  text-align: center;
-  transition: 200ms ease-in-out;
-  z-index: 10;
+	position: fixed;
+	border: 10px solid hsl(222, 82%, 65%);
+	border-radius: 1.875rem;
+	top: 50%;
+	left: 50%;
+	opacity: 1;
+	transform: translate(-50%, -50%) scale(0);
+	width: 30rem;
+	height: 35rem;
+	background-color: hsl(0, 0%, 100%);
+	padding: 4rem 3.75rem;
+	text-align: center;
+	transition: 200ms ease-in-out;
+	z-index: 10;
 }
 
-
 .popup.active {
-  transform: translate(-50%, -50%) scale(1);
+	transform: translate(-50%, -50%) scale(1);
 }
 
 .popup .close-btn {
-  background: none;
-  border: none; 
-  color: hsl(222, 82%, 65%);
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 4.5rem;
-  height: 1rem;
-  font-size: 4rem;
-  text-align: center;
-  cursor: pointer;
-  transition: color 150ms ease-in-out;
+	background: none;
+	border: none;
+	color: hsl(222, 82%, 65%);
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 4.5rem;
+	height: 1rem;
+	font-size: 4rem;
+	text-align: center;
+	cursor: pointer;
+	transition: color 150ms ease-in-out;
 }
 
 .popup .close-btn:hover {
-  color: hsl(222, 82%, 55%);
+	color: hsl(222, 82%, 55%);
 }
 
 #overlay {
-  position: fixed;
-  opacity: 0;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  transition: 200ms ease-in-out;
-  pointer-events: none;
-  z-index: 9;
+	position: fixed;
+	opacity: 0;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(5px);
+	transition: 200ms ease-in-out;
+	pointer-events: none;
+	z-index: 9;
 }
 
 #overlay.active {
-  opacity: 1;
-  pointer-events: all;
-
+	opacity: 1;
+	pointer-events: all;
 }
 
 .popup h1 {
@@ -215,7 +213,7 @@ svg {
 
 .popup .form-element ::placeholder {
 	color: hsl(222, 82%, 65%);
-	opacity: 1;
+	opacity: 0.5;
 }
 
 .popup .form-element input,
@@ -234,24 +232,68 @@ input:focus {
 }
 
 .popup .login {
-  width: 100%;
-  border-radius: 10px;
-  padding: 0.7rem 0;
-  border: none;
-  outline: none;
-  font-size: 1.7rem;
-  background-color: hsl(222, 82%, 65%);
-  transition: background-color 150ms ease-in-out;
+	width: 100%;
+	border-radius: 10px;
+	padding: 0.7rem 0;
+	border: none;
+	outline: none;
+	font-size: 1.7rem;
+	background-color: hsl(222, 82%, 65%);
 }
 
-.popup .login:hover {
-  background-color: hsl(222, 90%, 70%);
+/* End of login */
+
+/* About Us Start */
+#about-us h1 {
+	color: #5e89ef;
+	font-family: caveat;
+	font-weight: bold;
+	font-size: 3.5rem;
 }
 
-/* testimonies section */
+#about-us p {
+	font-size: 1.3rem;
+	line-height: 2.3rem;
+	color: #352771;
+}
+/* About Us End */
+
+/* Features Section Start */
+
+#features h1 {
+	margin-bottom: 1rem;
+	color: #5e89ef;
+	font-family: caveat;
+	font-weight: bold;
+	font-size: 3.5rem;
+}
+#features .card-title {
+	color: #352771;
+	font-size: 1.5rem;
+}
+#features p {
+	color: #352771;
+}
+
+.bttn {
+	padding: 10px;
+	border: none;
+	color: #ffffff;
+	font-size: 1 rem;
+	background-color: #5e89ef;
+	transition: 0.3s ease-in-out;
+}
+.bttn:hover {
+	color: #f7f5b2;
+	background-color: #5e89ef;
+	box-shadow: 0 5px 15px #5e89ef;
+	transform: scale(1.1);
+}
+/* Features Section End */
+
+/* Testimonies section */
 .carousel-wrapper {
 	padding: 0 15rem 2rem;
-	background-color: hsl(215, 84%, 85%);
 }
 
 .carousel-wrapper .carousel-title {
@@ -264,14 +306,16 @@ input:focus {
 	border-radius: 1rem;
 }
 
-/* footer section */
+/* Testimonies Section End */
+
+/* Footer Section Start */
 ul {
 	margin: 0;
 	padding: 0;
 }
 
 .footer-section {
-	background: hsl(251, 49%, 30%);
+	background: #5e89ef;
 	position: relative;
 }
 
@@ -299,7 +343,7 @@ ul {
 }
 
 .cta-text span {
-	color: hsl(0, 0%, 46%);
+	color: hsl(0, 0%, 100%);
 	font-size: 1rem;
 }
 
@@ -309,7 +353,7 @@ ul {
 }
 
 .footer-logo {
-  margin-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 .footer-logo .footer-title {
@@ -321,7 +365,7 @@ ul {
 .footer-text p {
 	margin-bottom: 0.875rem;
 	font-size: 0.875rem;
-	color: hsl(0, 0%, 49%);
+	color: hsl(0, 0%, 100%);
 	line-height: 1.75rem;
 }
 
@@ -340,17 +384,16 @@ ul {
 }
 
 .footer-social-icon i {
-  height: 2.5rem;
-  width: 2.5rem;
-  text-align: center;
-  line-height: 2.375rem;
-  border-radius: 50%;
-  transition: opacity 150ms ease-in-out;
+	height: 2.5rem;
+	width: 2.5rem;
+	text-align: center;
+	line-height: 2.375rem;
+	border-radius: 50%;
+	transition: opacity 150ms ease-in-out;
 }
 
 .footer-social-icon i:hover {
-  opacity: .9;
-
+	opacity: 0.9;
 }
 
 .facebook-bg {
@@ -362,19 +405,40 @@ ul {
 }
 
 .instagram-bg {
-  background: #f09433;
-  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+	background: #f09433;
+	background: -moz-linear-gradient(
+		45deg,
+		#f09433 0%,
+		#e6683c 25%,
+		#dc2743 50%,
+		#cc2366 75%,
+		#bc1888 100%
+	);
+	background: -webkit-linear-gradient(
+		45deg,
+		#f09433 0%,
+		#e6683c 25%,
+		#dc2743 50%,
+		#cc2366 75%,
+		#bc1888 100%
+	);
+	background: linear-gradient(
+		45deg,
+		#f09433 0%,
+		#e6683c 25%,
+		#dc2743 50%,
+		#cc2366 75%,
+		#bc1888 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 }
 
 .tiktok-bg {
-  background: hsl(0, 0%, 0%);
+	background: hsl(0, 0%, 0%);
 }
 
 .linkedin-bg {
-  background: hsl(199, 85%, 36%);
+	background: hsl(199, 85%, 36%);
 }
 
 .footer-widget-heading h3 {
@@ -394,9 +458,8 @@ ul {
 	width: 5rem;
 	background: hsl(58, 81%, 83%);
 }
-
 .footer-widget ul li {
-	display: inline-block;
+	list-style: none;
 	float: left;
 	width: 50%;
 	margin-bottom: 0.75rem;
@@ -412,7 +475,7 @@ ul {
 }
 
 .footer-widget ul li a {
-	color: hsl(0, 0%, 53%);
+	color: hsl(0, 0%, 100%);
 	text-transform: capitalize;
 }
 
@@ -423,13 +486,12 @@ ul {
 }
 
 .subscribe-form input {
-  width: 100%;
-  padding: 0.875rem 1.75rem;
-  background: hsl(215, 84%, 85%);
-  border: 1px solid hsl(215, 84%, 85%);
-  color: hsl(0, 0%, 100%);
-  outline: none;
-
+	width: 100%;
+	padding: 0.875rem 1.75rem;
+	background: hsl(0, 0%, 100%);
+	border: 1px solid hsl(215, 84%, 85%);
+	color: #f7f5b2;
+	outline: none;
 }
 
 .subscribe-form input,
@@ -453,19 +515,18 @@ input:focus {
 }
 
 .subscribe-form button {
-
-  position: absolute;
-  right: 0;
-  background: hsl(222, 82%, 65%);
-  padding: 0.8125rem 1.25rem;
-  border: 2px solid hsl(222, 82%, 65%);
-  top: 0;
-  transition: all 150ms ease-in-out;
+	position: absolute;
+	right: 0;
+	background: #352771;
+	padding: 0.8125rem 1.25rem;
+	border: 2px solid hsl(222, 82%, 65%);
+	top: 0;
+	transition: all 150ms ease-in-out;
 }
 
 .subscribe-form button:hover {
-  background: hsl(222, 96%, 68%);
-  border: 2px solid hsl(222, 96%, 68%);
+	background: #352771;
+	border: 2px solid hsl(222, 96%, 68%);
 }
 
 .subscribe-form button i {
@@ -475,14 +536,14 @@ input:focus {
 }
 
 .copyright-area {
-	background: hsl(222, 82%, 65%);
+	background: #512cf8;
 	padding: 1.5625rem 0;
 }
 
 .copyright-text p {
 	margin: 0;
 	font-size: 0.875rem;
-	color: hsl(0, 0%, 13%);
+	color: hsl(58, 81%, 83%);
 }
 
 .copyright-text p a {
@@ -500,11 +561,12 @@ input:focus {
 
 .footer-menu li a {
 	font-size: 0.875rem;
-	color: hsl(0, 0%, 13%);
+	color: hsl(58, 81%, 83%);
 	text-decoration: none;
 	transition: color 150ms ease-in-out;
 }
 
 .footer-menu li:hover a {
-  color: hsl(58, 81%, 83%);
+	color: hsl(0, 0%, 100%);
 }
+/* Footer end */
