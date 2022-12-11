@@ -26,7 +26,6 @@
     <title>Do-re-mind | Productivity on point</title>
   </head>
   <body>
-    
     <div class="dashboard-container mx-auto">
       <!-- sidebar -->
       <aside>
@@ -40,12 +39,30 @@
 
         <div class="sidebar">
           <div class="menu-icons">
-            <a href="#"><i class="fa-solid fa-list-ul"></i></a>
-            <a href="#"><i class="fa-solid fa-circle-plus"></i></a>   
-            <a href="#"><i class="fa-solid fa-tags"></i></a>
+            <div class="icon">
+                <a href="#"><i class="fa-solid fa-list-ul"></i></a>
+              <div class="hide">
+                <p>List</p>
+              </div>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
+              <div class="hide">
+                <p>Add</p>
+              </div>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-solid fa-tags"></i></a>
+              <div class="hide">
+                <p>Category</p>
+              </div>
+            </div>
           </div>
           <div class="logout">
             <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            <div class="hide">
+              <p>Logout</p>
+            </div>
           </div>
         </div>
       </aside>
@@ -55,12 +72,10 @@
       <main>
         <h1 class="title fw-bold">Dashboard</h1>
         <div class="no-items">
-          <img src="./assets/image/dashboard_illustration.png" alt="">
+          <img src="./assets/image/dashboard_illustration.png" alt="" />
         </div>
       </main>
       <!-- main content -->
     </div>
-
-    
   </body>
 </html>

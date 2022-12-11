@@ -96,39 +96,85 @@ aside .sidebar {
   margin-top: 8rem;
 }
 
-aside .sidebar .menu-icons {
+aside .sidebar .menu-icons .icon {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  transition: all 300ms ease-in-out;
   font-size: 2rem;
   position: relative;
 }
 
-aside .sidebar .menu-icons i {
-  transition: transform 300ms ease-in-out;
+aside .sidebar .menu-icons .icon:not(:last-of-type) {
+  margin-bottom: 4rem;
 }
 
-aside .sidebar .menu-icons i {
+aside .sidebar .menu-icons .icon i {
   color: hsl(58, 81%, 83%);
 }
 
-aside .sidebar .menu-icons i:hover {
-  transform: translateY(-20px);
+aside .sidebar .menu-icons .icon:hover {
+  cursor: pointer;
+  transform: translateX(-20px);
+}
+
+aside .sidebar .menu-icons .icon .hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  font-size: 1rem;
+  position: absolute;
+}
+
+aside .sidebar .menu-icons .icon .hide p {
+  margin-bottom: 0;
+}
+
+aside .sidebar .menu-icons .icon:hover > .hide {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(45px);
+}
+
+aside .sidebar .menu-icons .icon:last-of-type:hover > .hide {
+  transform: translateX(65px);
 }
 
 aside .sidebar .logout {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  margin-top: 8rem;
+  margin-top: 7rem;
+  position: relative;
+  transition: all 300ms ease-in-out;
+}
+
+aside .sidebar .logout:hover {
+  cursor: pointer;
+  transform: translateX(-20px);
 }
 
 aside .sidebar .logout i {
   color: hsl(58, 81%, 83%);
+}
+
+aside .sidebar .logout .hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  font-size: 1rem;
+  position: absolute;
+}
+
+aside .sidebar .logout:hover > .hide {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(55px);
+}
+
+aside .sidebar .logout .hide p {
+  margin-bottom: 0;
 }
 
 /* main content */
@@ -149,4 +195,3 @@ main .no-items {
 main .no-items img {
   width: 30rem;
 }
-
