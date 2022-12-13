@@ -57,14 +57,14 @@ svg {
 
 #doremind {
 	font-family: caveat;
-	color: #352771;
+	color: hsl(251, 49%, 30%);
 	font-weight: bold;
 }
 
 /* Navigation Bar */
 .navbar {
-	z-index: 1;
-	background-color: #5e89ef;
+	z-index: 8;
+	background-color: hsl(222, 82%, 65%);
 	border-bottom: 5px white;
 }
 
@@ -79,13 +79,13 @@ svg {
 .navbar-brand {
 	font-family: caveat;
 	font-size: 4vw;
-	color: #352771;
+	color: hsl(251, 49%, 30%);
 	font-weight: bold;
 }
 
 .nav-link {
 	font-size: 1.5vw;
-	color: #352771;
+	color: hsl(251, 49%, 30%);
 }
 /* End of Navigation bar */
 
@@ -93,20 +93,20 @@ svg {
 #hero {
 	position: relative;
 	height: 100vh;
-	background-color: #5e89ef;
+	background-color: hsl(222, 82%, 65%);
 }
 #hero img {
 	width: 40vw;
 }
 #hero h1 {
 	font-family: caveat;
-	color: #352771;
+	color: hsl(251, 49%, 30%);
 	font-size: 9vw;
 	font-weight: bold;
 }
 #hero h3 {
 	font-size: 1.8vw;
-	color: #f7f5b2;
+	color: hsl(58, 81%, 83%);
 	font-weight: bold;
 }
 
@@ -115,8 +115,8 @@ svg {
 	border-radius: 5px;
 	font-size: 2vw;
 	font-weight: bold;
-	color: #352771;
-	background-color: #f7f5b2;
+	color: hsl(251, 49%, 30%);
+	background-color: hsl(58, 81%, 83%);
 	border: none;
 	margin-top: 10px;
 }
@@ -167,7 +167,7 @@ svg {
 	position: fixed;
 	opacity: 0;
 	inset: 0;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: hsla(0, 0%, 0%, 0.5);
 	backdrop-filter: blur(5px);
 	transition: 200ms ease-in-out;
 	pointer-events: none;
@@ -245,7 +245,7 @@ input:focus {
 
 /* About Us Start */
 #about-us h1 {
-	color: #5e89ef;
+	color: hsl(222, 82%, 65%);
 	font-family: caveat;
 	font-weight: bold;
 	font-size: 3.5rem;
@@ -254,7 +254,7 @@ input:focus {
 #about-us p {
 	font-size: 1.3rem;
 	line-height: 2.3rem;
-	color: #352771;
+	color: hsl(251, 49%, 30%);
 }
 /* About Us End */
 
@@ -262,31 +262,32 @@ input:focus {
 
 #features h1 {
 	margin-bottom: 1rem;
-	color: #5e89ef;
+	color: hsl(222, 82%, 65%);
 	font-family: caveat;
 	font-weight: bold;
 	font-size: 3.5rem;
 }
 #features .card-title {
-	color: #352771;
+	color: hsl(251, 49%, 30%);
 	font-size: 1.5rem;
 }
 #features p {
-	color: #352771;
+	color: hsl(251, 49%, 30%);
 }
 
 .bttn {
 	padding: 10px;
 	border: none;
-	color: #ffffff;
+	color: hsl(0, 0%, 100%);
 	font-size: 1 rem;
-	background-color: #5e89ef;
+	background-color: hsl(222, 82%, 65%);
+	margin-bottom: 1.3rem;
 	transition: 0.3s ease-in-out;
 }
 .bttn:hover {
-	color: #f7f5b2;
-	background-color: #5e89ef;
-	box-shadow: 0 5px 15px #5e89ef;
+	color: hsl(58, 81%, 83%);
+	background-color: hsl(222, 82%, 65%);
+	box-shadow: 0 5px 15px hsl(222, 82%, 65%);
 	transform: scale(1.1);
 }
 /* Features Section End */
@@ -315,7 +316,7 @@ ul {
 }
 
 .footer-section {
-	background: #5e89ef;
+	background: hsl(222, 82%, 65%);
 	position: relative;
 }
 
@@ -405,30 +406,30 @@ ul {
 }
 
 .instagram-bg {
-	background: #f09433;
+	background: hsl(31, 86%, 57%);
 	background: -moz-linear-gradient(
 		45deg,
-		#f09433 0%,
-		#e6683c 25%,
-		#dc2743 50%,
-		#cc2366 75%,
-		#bc1888 100%
+		hsl(31, 86%, 57%) 0%,
+		hsl(16, 77%, 57%) 25%,
+		hsl(351, 72%, 51%) 50%,
+		hsl(336, 71%, 47%) 75%,
+		hsl(319, 77%, 42%) 100%
 	);
 	background: -webkit-linear-gradient(
 		45deg,
-		#f09433 0%,
-		#e6683c 25%,
-		#dc2743 50%,
-		#cc2366 75%,
-		#bc1888 100%
+		hsl(31, 86%, 57%) 0%,
+		hsl(16, 77%, 57%) 25%,
+		hsl(351, 72%, 51%) 50%,
+		hsl(336, 71%, 47%) 75%,
+		hsl(319, 77%, 42%) 100%
 	);
 	background: linear-gradient(
 		45deg,
-		#f09433 0%,
-		#e6683c 25%,
-		#dc2743 50%,
-		#cc2366 75%,
-		#bc1888 100%
+		hsl(31, 86%, 57%) 0%,
+		hsl(16, 77%, 57%) 25%,
+		hsl(351, 72%, 51%) 50%,
+		hsl(336, 71%, 47%) 75%,
+		hsl(319, 77%, 42%) 100%
 	);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 }
@@ -517,16 +518,16 @@ input:focus {
 .subscribe-form button {
 	position: absolute;
 	right: 0;
-	background: #352771;
+	background: hsl(251, 49%, 30%);
 	padding: 0.8125rem 1.25rem;
-	border: 2px solid hsl(222, 82%, 65%);
 	top: 0;
+	bottom: 0;
 	transition: all 150ms ease-in-out;
+	border: none;
 }
 
 .subscribe-form button:hover {
-	background: #352771;
-	border: 2px solid hsl(222, 96%, 68%);
+	background: hsl(251, 49%, 30%, .9);
 }
 
 .subscribe-form button i {
@@ -536,7 +537,7 @@ input:focus {
 }
 
 .copyright-area {
-	background: #512cf8;
+	background: hsl(251, 94%, 57%);
 	padding: 1.5625rem 0;
 }
 
