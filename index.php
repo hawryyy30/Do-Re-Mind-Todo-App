@@ -53,7 +53,7 @@
 			defer
 		></script>
 		<!-- Title and icons -->
-		<link rel="icon" type="image/x-icon" href="/assets/image/favicon.png" />
+		<link rel="icon" type="image/x-icon" href="./assets/image/favicon.png" />
 		<title>Do-re-mind | Productivity on point</title>
 	</head>
 	<body>
