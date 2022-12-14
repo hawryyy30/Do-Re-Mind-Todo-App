@@ -60,6 +60,7 @@ svg {
 	display: grid;
 	gap: 1.8rem;
 	grid-template-columns: 16rem auto;
+	min-height: 100%;
 }
 
 aside {

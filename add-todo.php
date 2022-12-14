@@ -44,14 +44,14 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>g
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/add.css" />
+    <link rel="stylesheet" href="./assets/css/add-edit.css" />
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -70,11 +70,11 @@
     <title>Do-re-mind | Productivity on point</title>
   </head>
   <body>
-    <div class="container mt-5">
+    <div class="container">
       <div class="row">
-        <div class="col-md-5 mx-auto">
+        <div class="col-md-5">
           <div class="card bg-white rounded-border shadow">
-            <div class="card-header px-4 py-3">
+            <div class="card-header">
               <h4>Add Todo</h4>
             </div>
             <div class="card-body p-4">
@@ -88,7 +88,7 @@
                   <label for="desc" class="form-label">Description</label>
                   <textarea class="form-control" name="desc" id="desc" rows="3" required><?php if (isset($_POST["addTodo"])) { echo $_POST["title"]; } ?></textarea>
                 </div>
-                <div>
+                <div class="button">
                    <button type="submit" name="addTodo">Add</button>
                    <button type="reset">Reset</button>
                 </div>

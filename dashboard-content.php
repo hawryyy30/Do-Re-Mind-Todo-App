@@ -5,6 +5,7 @@ include 'includes/config.php';
     header("Location: index.php");
     die();
   }
+
 ?>
 
 <!DOCTYPE html>
