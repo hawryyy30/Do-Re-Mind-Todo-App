@@ -49,7 +49,7 @@ include 'includes/config.php';
         <div class="sidebar">
           <div class="menu-icons">
             <div class="icon">
-                <a href="#"><i class="fa-solid fa-list-ul"></i></a>
+                <a href=""><i class="fa-solid fa-list-ul"></i></a>
               <div class="hide">
                 <p>List</p>
               </div>
@@ -93,41 +93,36 @@ include 'includes/config.php';
         <div class="container">
           <div class="row">
             <div class="col">
-              <h3>Manage your task</h3>
+              <h2>Todo list</h2>
               <hr>
             </div>
           </div>
-          <div class="row">
-            <div class="col">
-            <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+          <div class="container">
+            <div class="row">
+              <?php
+                // get user id based on user username
+                $sql = "SELECT id FROM user WHERE username='{$_SESSION["user_username"]}'";
+                $result = mysqli_query($conn, $sql);
+                $count = mysqli_num_rows($result);
 
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                if ($count > 0) {
+                  $row = mysqli_fetch_assoc($result);
+                  $user_id = $row["id"];
+                }
+                else {
+                  $user_id = 0;
+                }
+
+                $sql1 = "SELECT * FROM todos WHERE user_id='{$user_id}'ORDER BY id DESC";
+                $result1 = mysqli_query($conn, $sql1);
+                if (mysqli_num_rows($result1) > 0){
+                      foreach($result1 as $todo){
+                ?>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <?php getTodo($todo); ?>
                 </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
+                <?php } } else { header("location: dashboard.php"); } ?>                   
             </div>
           </div>
         </div>

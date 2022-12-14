@@ -49,7 +49,7 @@ include 'includes/config.php';
         <div class="sidebar">
           <div class="menu-icons">
             <div class="icon">
-                <a href="dashboard-content.php"><i class="fa-solid fa-list-ul"></i></a>
+                <a href="#"><i class="fa-solid fa-list-ul"></i></a>
               <div class="hide">
                 <p>List</p>
               </div>
@@ -79,9 +79,60 @@ include 'includes/config.php';
 
       <!-- main content -->
       <main>
-        <h1 class="title fw-bold">Dashboard</h1>
-        <div class="no-items">
-          <img src="./assets/image/dashboard_illustration.png" alt="" />
+        <div class="container">
+          <div class="row d-flex justify-content-between">
+            <div class="col-md-6 my-auto">
+              <h1>Dashboard</h1>
+              <h2>What are your plans today?</h2>
+            </div>
+            <div class="col-md-4 my-auto ">
+              <img src="./assets/image/illustration.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h2>Todo list</h2>
+              <hr>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <?php
+                $todoId = mysqli_real_escape_string($conn, $_GET["id"]);
+                // get user id based on user username
+                
+                $sql = "SELECT id FROM user WHERE username='{$_SESSION["user_username"]}'";
+                $result = mysqli_query($conn, $sql);
+                $count = mysqli_num_rows($result);
+
+                if ($count > 0) {
+                  $row = mysqli_fetch_assoc($result);
+                  $user_id = $row["id"];
+                }
+                else {
+                  $user_id = 0;
+                }
+                $sql1 = "SELECT * FROM todos WHERE id='{$todoId}' AND user_id='{$user_id}'";
+                $result1 = mysqli_query($conn, $sql1);
+                if (mysqli_num_rows($result1) > 0){
+                      foreach($result1 as $todo){
+                ?>
+                <main>
+                  <h1><?php echo $todo["title"]; ?></h1>
+                  <p class="fs-5 col-md-8"><?php echo $todo["description"]; ?></p>
+                  <div class="mb-5">
+                    <a href="<?php echo 'edit-todo.php?id='. $todo['id']; ?>" class="btn btn-primary btn-lg px-4 me-2">Edit</a>
+                    <a href="<?php echo 'delete-todo.php?id='. $todo['id']; ?>" class="btn btn-danger btn-lg px-4">Delete</a>
+                  </div>
+                </main>
+                <?php } 
+                } else {
+                  header("location: dashboard.php");
+                } ?>                   
+            </div>
+          </div>
         </div>
       </main>
       <!-- main content -->
