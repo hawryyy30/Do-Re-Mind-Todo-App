@@ -6,45 +6,60 @@
     die();
   }
 
+  if (isset($_GET["id"])) {
+    $todoId = mysqli_real_escape_string($conn, $_GET["id"]);
+  }
+  else {
+    header("Location: dashboard-content.php");
+  }
+
   $msg = "";
 
-  if (isset($_POST["addTodo"])) {
+  if (isset($_POST["updateTodo"])) {
     $title = mysqli_real_escape_string($conn, $_POST["title"]);
     $desc = mysqli_real_escape_string($conn, $_POST["desc"]);
-    
-    // get user id based on user username
-    $sql = "SELECT id FROM user WHERE username='{$_SESSION["user_username"]}'";
-    $result = mysqli_query($conn, $sql);
-    $count = mysqli_num_rows($result);
 
-    if ($count > 0) {
-      $row = mysqli_fetch_assoc($result);
-      $user_id = $row["id"];
-    }
-    else {
-      $user_id = 0;
-    }
-
-    $sql = null;
-
-    // inserting todo
-    $sql = "INSERT INTO todos (title, description, user_id) VALUES ('$title', '$desc', '$user_id')";
+    // updating todo
+    $sql = "UPDATE todos SET title='{$title}', description='{$desc}', date=CURRENT_TIMESTAMP WHERE id='{$todoId}'";
     $result = mysqli_query($conn, $sql);
     if ($result) {
       $_POST["title"] = "";
       $_POST["desc"] = "";
-      $msg = "<div class='alert alert-success'>Todo is created</div>";
+      $msg = "<div class='alert alert-success'>Todo is updated</div>";
       header("refresh:1; url=dashboard-content.php");
     }
     else {
-      $msg = "<div class='alert alert-danger'>Todo is not created</div>";
+      $msg = "<div class='alert alert-danger'>Todo is not updated</div>";
     }
   }
+
+  // get user id based on user username
+  $sql = "SELECT id FROM user WHERE username='{$_SESSION["user_username"]}'";
+  $result = mysqli_query($conn, $sql);
+  $count = mysqli_num_rows($result);
+
+  if ($count > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $user_id = $row["id"];
+  }
+  else {
+    $user_id = 0;
+  }
+
+  $sql = "SELECT * FROM todos WHERE id='{$todoId}' AND user_id='{$user_id}'";
+  $result = mysqli_query($conn, $sql);
+  if (mysqli_num_rows($result) > 0) {
+    $todoData = mysqli_fetch_assoc($result);
+  }
+  else {
+    header("Location: dashboard-content.php");
+  }
+  
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>g
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -75,21 +90,21 @@
         <div class="col-md-5 mx-auto">
           <div class="card bg-white rounded-border shadow">
             <div class="card-header px-4 py-3">
-              <h4>Add Todo</h4>
+              <h4>Edit Todo</h4>
             </div>
             <div class="card-body p-4">
               <?php echo $msg; ?>
               <form action="" method="POST">
                 <div class="mb-3">
                   <label for="title" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="title" name="title" placeholder="e.g. Do Homework Today" value="<?php if (isset($_POST["addTodo"])) { echo $_POST["title"]; } ?>" required>
+                  <input type="text" class="form-control" id="title" name="title" placeholder="e.g. Do Homework Today" value="<?php echo $todoData["title"]; ?>" required>
                 </div>
                 <div class="mb-3">
                   <label for="desc" class="form-label">Description</label>
-                  <textarea class="form-control" name="desc" id="desc" rows="3" required><?php if (isset($_POST["addTodo"])) { echo $_POST["title"]; } ?></textarea>
+                  <textarea class="form-control" name="desc" id="desc" rows="3" required><?php echo $todoData['description']; ?></textarea>
                 </div>
                 <div>
-                   <button type="submit" name="addTodo">Add</button>
+                   <button type="submit" name="updateTodo">Update Todo</button>
                    <button type="reset">Reset</button>
                 </div>
               </form>
