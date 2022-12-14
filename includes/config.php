@@ -73,13 +73,14 @@
     $output = '<div class="card shadow-sm">
         <div class="card-body">
             <h4 class="card-title">'.textLimit($todo['title'], 28).'</h4>
+            <small class="date">'. $todo['date'] .'</small>
+            <hr>
             <p class="card-text">'.textLimit($todo['description'], 75).'</p>
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
+            <div class="">
+                <div class="btn-group button">
                     <a href="view-todo.php?id='. $todo['id'] .'" class="btn btn-sm btn-outline-secondary">View</a>
                     <a href="edit-todo.php?id='. $todo['id'] .'" class="btn btn-sm btn-outline-secondary">Edit</a>
                 </div>
-                <small class="text-muted">'. $todo['date'] .'</small>
             </div>
         </div>
     </div>';

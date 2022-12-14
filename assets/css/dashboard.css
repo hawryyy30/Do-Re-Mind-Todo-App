@@ -198,3 +198,53 @@ main .no-items {
 main .no-items img {
 	width: 30rem;
 }
+/* Card Styles */
+.card-text{
+	color: hsl(222, 82%, 65%);
+	font-size: 1.2rem;
+}
+.card-title{
+	color: hsl(222, 82%, 65%);
+	font-weight: bold;
+	font-size: 2rem;
+}
+.card{
+	border-radius: 1rem;
+	border-color: hsl(222, 82%, 65%);
+	border-width: 0.2rem;
+}
+.date{
+	font-size: 1.2em;
+	color:hsl(222, 82%, 40%) ;
+	opacity: 0.3;
+}
+hr{
+	color: hsl(222, 82%, 65%);
+
+}
+.dashtitle{
+	font-family: "Caveat", cursive;
+	color: hwb(222 37% 6%);
+	font-size: 3.5rem;
+}
+.caption{
+	color: hwb(222 37% 6%);
+	font-size: 1.3rem;
+	font-weight: 400;
+}
+.dashsubtitle{
+	color: hwb(222 37% 6%);
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.button a{
+	color: hsl(222, 70%, 55%);
+	font-size: 1rem;
+	border-color: hwb(222 37% 6%) ;
+	border-radius: 10px;
+	border-width: 3px;
+}
+.button a:hover{
+	border-color: hwb(222 37% 6%) ;
+	background-color:hwb(222 37% 6%) ;
+}

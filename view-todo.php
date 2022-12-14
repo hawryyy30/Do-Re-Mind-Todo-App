@@ -41,7 +41,7 @@ include 'includes/config.php';
         <div class="top">
           <div class="logo text-center">
             <i class="fa-regular fa-user mb-2"></i>
-            <h4>hawrry</h4>
+            <h4>Yo, <?php echo $_SESSION["user_username"] ?></h4>
             <p>Welcome back</p>
           </div>
         </div>
@@ -49,7 +49,7 @@ include 'includes/config.php';
         <div class="sidebar">
           <div class="menu-icons">
             <div class="icon">
-                <a href="#"><i class="fa-solid fa-list-ul"></i></a>
+                <a href="dashboard-content.php"><i class="fa-solid fa-list-ul"></i></a>
               <div class="hide">
                 <p>List</p>
               </div>
@@ -82,8 +82,8 @@ include 'includes/config.php';
         <div class="container">
           <div class="row d-flex justify-content-between">
             <div class="col-md-6 my-auto">
-              <h1>Dashboard</h1>
-              <h2>What are your plans today?</h2>
+              <h1 class="dashtitle fw-bold" >Editing Task</h1>
+
             </div>
             <div class="col-md-4 my-auto ">
               <img src="./assets/image/illustration.png" alt="">
@@ -93,7 +93,7 @@ include 'includes/config.php';
         <div class="container">
           <div class="row">
             <div class="col">
-              <h2>Todo list</h2>
+              <h3 class="dashsubtitle"></h3>
               <hr>
             </div>
           </div>
@@ -120,8 +120,8 @@ include 'includes/config.php';
                       foreach($result1 as $todo){
                 ?>
                 <main>
-                  <h1><?php echo $todo["title"]; ?></h1>
-                  <p class="fs-5 col-md-8"><?php echo $todo["description"]; ?></p>
+                  <h1 class="card-title" ><?php echo $todo["title"]; ?></h1>
+                  <p  class="card-text fs-5 col-md-8 "><?php echo $todo["description"]; ?></p>
                   <div class="mb-5">
                     <a href="<?php echo 'edit-todo.php?id='. $todo['id']; ?>" class="btn btn-primary btn-lg px-4 me-2">Edit</a>
                     <a href="<?php echo 'delete-todo.php?id='. $todo['id']; ?>" class="btn btn-danger btn-lg px-4">Delete</a>
