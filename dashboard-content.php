@@ -41,7 +41,7 @@ include 'includes/config.php';
         <div class="top">
           <div class="logo text-center">
             <i class="fa-regular fa-user mb-2"></i>
-            <h4>hawrry</h4>
+            <h4><?php echo $_SESSION["user_username"] ?></h4>
             <p>Welcome back</p>
           </div>
         </div>
