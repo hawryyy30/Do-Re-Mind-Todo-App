@@ -63,7 +63,6 @@ svg {
 }
 
 aside {
-	height: 100vh;
 	background: hsl(222, 82%, 65%);
 }
 
@@ -143,11 +142,12 @@ aside .sidebar .menu-icons .icon:last-of-type:hover > .hide {
 }
 
 aside .sidebar .logout {
+	background: hsl(222, 82%, 65%);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 2rem;
-	margin-top: 7rem;
+	margin: 7rem 0 4rem 0;
 	position: relative;
 	transition: all 300ms ease-in-out;
 }
