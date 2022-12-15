@@ -92,7 +92,7 @@ svg {
 .card-body .button button {
 	border: none;
 	outline: none;
-	padding: .5rem 2rem;
+	padding: .5rem 1.5rem;
 	border-radius: 5px;
 	background-color: hsl(222, 82%, 65%);
 	transition: color, background-color 300ms ease-in-out;

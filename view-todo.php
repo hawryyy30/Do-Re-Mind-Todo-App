@@ -41,7 +41,7 @@ include 'includes/config.php';
         <div class="top">
           <div class="logo text-center">
             <i class="fa-regular fa-user mb-2"></i>
-            <h4>Yo, <?php echo $_SESSION["user_username"] ?></h4>
+            <h4>Yo, <?php echo $_SESSION["user_username"] ?> !</h4>
             <p>Welcome back</p>
           </div>
         </div>
@@ -81,11 +81,10 @@ include 'includes/config.php';
       <main>
         <div class="container">
           <div class="row d-flex justify-content-between">
-            <div class="col-md-6 my-auto">
+            <div class="col-md-6 mt-auto">
               <h1 class="dashtitle fw-bold" >Editing Task</h1>
-
             </div>
-            <div class="col-md-4 my-auto ">
+            <div class="col-md-4 mt-auto ">
               <img src="./assets/image/illustration.png" alt="">
             </div>
           </div>
@@ -121,7 +120,7 @@ include 'includes/config.php';
                 ?>
                 <main>
                   <h1 class="card-title" ><?php echo $todo["title"]; ?></h1>
-                  <p  class="card-text fs-5 col-md-8 "><?php echo $todo["description"]; ?></p>
+                  <p  class="fs-5 card-view"><?php echo $todo["description"]; ?></p>
                   <div class="mb-5">
                     <a href="<?php echo 'edit-todo.php?id='. $todo['id']; ?>" class="btn btn-primary btn-lg px-4 me-2">Edit</a>
                     <a href="<?php echo 'delete-todo.php?id='. $todo['id']; ?>" class="btn btn-danger btn-lg px-4">Delete</a>
