@@ -21,7 +21,7 @@ html,
 body {
 	font-family: poppins;
 	height: 100%;
-  background: hsl(201, 76%, 47%);  /* fallback for old browsers */
+  	background: hsl(201, 76%, 47%);  /* fallback for old browsers */
 	background: -webkit-linear-gradient(45deg, hsl(222, 82%, 65%), hsl(215, 84%, 85%));  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(45deg, hsl(222, 82%, 65%), hsl(215, 84%, 85%)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
@@ -101,4 +101,9 @@ svg {
 .card-body .button button:hover {
 	color: hsl(58, 81%, 83%);
 	background-color: hsl(222, 70%, 55%);
+}
+
+.alert{
+	background-color: hsl(222, 70%, 55%);
+	color: hsl(58, 81%, 83%);
 }

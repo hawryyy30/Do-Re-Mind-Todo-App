@@ -5,6 +5,7 @@ include 'includes/config.php';
     header("Location: index.php");
     die();
   }
+
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +42,7 @@ include 'includes/config.php';
         <div class="top">
           <div class="logo text-center">
             <i class="fa-regular fa-user mb-2"></i>
-            <h4>hawrry</h4>
+            <h4>Yo, <?php echo $_SESSION["user_username"] ?>!</h4>
             <p>Welcome back</p>
           </div>
         </div>
@@ -79,6 +80,7 @@ include 'includes/config.php';
 
       <!-- main content -->
       <main>
+        <div class="container"></div>
         <h1 class="title fw-bold">Dashboard</h1>
         <div class="no-items">
           <img src="./assets/image/dashboard_illustration.png" alt="" />

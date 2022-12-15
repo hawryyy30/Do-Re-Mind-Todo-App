@@ -33,7 +33,7 @@
     if ($result) {
       $_POST["title"] = "";
       $_POST["desc"] = "";
-      $msg = "<div class='alert alert-success'>Todo is created</div>";
+      $msg = "<div class='alert'>Todo is created</div>";
       header("refresh:1; url=dashboard-content.php");
     }
     else {
@@ -88,9 +88,11 @@
                   <label for="desc" class="form-label">Description</label>
                   <textarea class="form-control" name="desc" id="desc" rows="3" required><?php if (isset($_POST["addTodo"])) { echo $_POST["title"]; } ?></textarea>
                 </div>
-                <div class="button">
+                <div class="button d-flex justify-content-between">
                    <button type="submit" name="addTodo">Add</button>
                    <button type="reset">Reset</button>
+                   <button onclick="history.back()" >Cancel</button>
+                   <!-- <input type="button" value="back" onclick="history.back()"/>  -->
                 </div>
               </form>
             </div>

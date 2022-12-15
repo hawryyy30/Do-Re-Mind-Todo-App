@@ -42,7 +42,7 @@ include 'includes/config.php';
         <div class="top">
           <div class="logo text-center">
             <i class="fa-regular fa-user mb-2"></i>
-            <h4>hawrry</h4>
+            <h4>Yo, <?php echo $_SESSION["user_username"] ?> !</h4>
             <p>Welcome back</p>
           </div>
         </div>
@@ -83,8 +83,8 @@ include 'includes/config.php';
         <div class="container">
           <div class="row d-flex justify-content-between">
             <div class="col-md-6 my-auto">
-              <h1>Dashboard</h1>
-              <h2>What are your plans today?</h2>
+              <h1 class="dashtitle fw-bold" >Dashboard</h1>
+              <h2 class="caption" > A good task is a completed task</h2>
             </div>
             <div class="col-md-4 my-auto ">
               <img src="./assets/image/illustration.png" alt="">
@@ -94,13 +94,13 @@ include 'includes/config.php';
         <div class="container">
           <div class="row">
             <div class="col">
-              <h2>Todo list</h2>
+              <h3 class="dashsubtitle">What are your plans today?</h3>
               <hr>
             </div>
           </div>
           <div class="container">
             <div class="row">
-              <?php
+              <?php 
                 // get user id based on user username
                 $sql = "SELECT id FROM user WHERE username='{$_SESSION["user_username"]}'";
                 $result = mysqli_query($conn, $sql);
@@ -123,7 +123,8 @@ include 'includes/config.php';
                 <div class="col-lg-3 col-md-6 mb-4">
                     <?php getTodo($todo); ?>
                 </div>
-                <?php } } else { header("location: dashboard.php"); } ?>                   
+                <?php } } else { header("location: dashboard.php"); } ?>     
+                              
             </div>
           </div>
         </div>
