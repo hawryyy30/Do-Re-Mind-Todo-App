@@ -106,6 +106,7 @@
                 <div class="button">
                    <button type="submit" name="updateTodo">Update</button>
                    <button type="reset">Reset</button>
+                   <button onclick="history.back()" >Cancel</button>
                 </div>
               </form>
             </div>

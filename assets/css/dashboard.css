@@ -89,7 +89,7 @@ aside .logo i {
 }
 
 aside .logo h4 {
-	font-size: 1.875rem;
+	font-size: 1.5rem;
 	font-weight: 500;
 	margin-bottom: 0.3rem;
 }
@@ -198,45 +198,74 @@ main .no-items {
 main .no-items img {
 	width: 30rem;
 }
+
+.container {
+	padding-left: 0;
+}
+
+.container .col hr {
+	border: none;
+	height: 3px;
+	opacity: .6;
+	/* Set the hr color */
+	color: hsl(222, 82%, 65%); /* old IE */
+	background-color: hsl(222, 82%, 65%); /* Modern Browsers */
+	width: 98.5%;
+}
+
 /* Card Styles */
-.card-text{
+.card-text {
+		color: hsl(222, 82%, 65%);
+		font-size: 1.2rem;
+}
+
+.card-view {
 	color: hsl(222, 82%, 65%);
 	font-size: 1.2rem;
+	text-align: justify;
+	margin-bottom: 2rem;
+	border: 3px solid hsl(222, 82%, 65%);
+	border-radius: 5px;
+	padding: 1rem;
 }
+
 .card-title{
 	color: hsl(222, 82%, 65%);
 	font-weight: bold;
 	font-size: 2rem;
+	margin-bottom: 1rem;
 }
+
 .card{
 	border-radius: 1rem;
 	border-color: hsl(222, 82%, 65%);
 	border-width: 0.2rem;
 }
+
 .date{
 	font-size: 1.2em;
 	color:hsl(222, 82%, 40%) ;
 	opacity: 0.3;
 }
-hr{
-	color: hsl(222, 82%, 65%);
 
-}
 .dashtitle{
 	font-family: "Caveat", cursive;
 	color: hwb(222 37% 6%);
 	font-size: 3.5rem;
 }
+
 .caption{
 	color: hwb(222 37% 6%);
 	font-size: 1.3rem;
 	font-weight: 400;
 }
+
 .dashsubtitle{
 	color: hwb(222 37% 6%);
 	font-size: 1.5rem;
 	font-weight: bold;
 }
+
 .button a{
 	color: hsl(222, 70%, 55%);
 	font-size: 1rem;
@@ -244,6 +273,7 @@ hr{
 	border-radius: 10px;
 	border-width: 3px;
 }
+
 .button a:hover{
 	border-color: hwb(222 37% 6%) ;
 	background-color:hwb(222 37% 6%) ;
