@@ -24,8 +24,8 @@ Welcome to Do-re-mind! We know how busy and overwhelming life can get, and that'
 
 ## Add Todo
 
-![add-todo.php](https://github.com/hawryyy30/uas-pw3/blob/main/Screenshots/Add%20todo.png)
+![add-todo.php](https://github.com/hawryyy30/uas-pw3/blob/main/Screenshots/Add-todo.png)
 
 ## Edit or Delete Todo
 
-![edit-todo.php](https://github.com/hawryyy30/uas-pw3/blob/main/Screenshots/Edit%20or%20Delete%20Todo.png)
+![edit-todo.php](https://github.com/hawryyy30/uas-pw3/blob/main/Screenshots/editdeleteTodo.png)
